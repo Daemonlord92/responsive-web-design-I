@@ -1,3 +1,263 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* Body Code */
+
+body {
+	max-width: 1000px;
+	margin: 25px auto;
+}
+
+/* Header Code */
+header h1 {
+	font-size: 65px;
+}
+
+header nav a {
+	color: #DCDCDC;
+	text-decoration: none;	
+}
+
+header .flex-nav {
+	display: inline-flex;
+
+}
+
+header div .nav-bar{
+	margin-top: 50px;
+	width: 65%;
+	display: flex;
+	justify-content: space-around;
+}
+
+header div .logo {
+	width:25%;
+	display: inline;
+	vertical-align: top;
+	padding-top: -25px;
+}
+
+header div .logo a img {
+	width:75%;
+}
+
+.container {
+	display:flex;
+	flex-wrap: wrap;
+}
+
+header div {
+	align-content: center;
+}
+
+header div h1 {
+	max-width: 200px;
+	text-align: center;
+	margin: 50px 30px;
+
+}
+
+header div p {
+	border: 1px black solid;
+	padding: 5px 25px;
+	max-width: 130px;
+	margin: 0px auto;
+}
+
+header div img {
+	margin: 45px 100px;
+}
+.services-header-img {
+	margin-top: 25px;
+}
+
+/* Section Content */
+h2 {
+	font-size: 30px;
+
+}
+
+.flexxer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.sec-flex {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 400px;
+	border: 1px black solid;
+	background-color: #F8F8FF;
+	padding:25px;
+}
+.learn-button {
+	display: flex;
+	border: 1px black solid;
+	border-radius: 5px;
+	padding: 10px 40px;
+	font-size: 10px;
+	justify-content: center;
+	margin-top: 15px;
+
+}
+.sec-flex-2 {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 400px;
+	padding:25px;
+}
+.sec-flex-2 ul li {
+		list-style: square;
+		line-height: 2;
+}
+
+div section {
+	display: flex;
+	margin: 25px 25px;
+}
+
+div section div {
+	width: 33%;
+
+}
+
+div section .fifty {
+	width: 50%;
+}
+
+/* Footer Section */
+
+footer div p {
+	text-align: center;
+}
+
+@media(max-width: 900px){
+	/* start of the Tablet styles */
+
+	header .flexxer .logo {
+		order: 2;
+		display: block;
+		margin: 0 auto;
+		padding-bottom: 15px;
+	}
+
+	header .flexxer .nav-bar {
+		margin-top: 15px;
+		order:3;
+		width:100%;
+	}
+
+	header .container div img {
+		display: none;
+	}
+	header .container .tab-mobile-center {
+		margin: 0 auto;
+		padding-bottom: 50px;
+	}
+}
+
+@media(max-width: 500px) {
+	/* Start of the Phone Styles */
+
+	header div .nav-bar {
+		display: flex;
+		width:100%;
+		flex-direction: column;
+		text-align: center;
+
+	}
+
+	header .flexxer .logo {
+		width: 100%;
+		border-bottom: 1px black solid;
+	}
+
+	header .flexxer .logo a img {
+		width:35%;
+		border-bottom: none;
+	}
+
+	header div nav a {
+		border-bottom: 1px black solid;
+		width: 100%;
+		padding: 25px;
+	}
+
+	div section div {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	div section .fifty {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	div div img {
+		width: 100%;
+		margin-left: 25px;
+	}
+}
